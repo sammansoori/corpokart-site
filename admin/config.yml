@@ -3,4 +3,23 @@ backend:
   repo: sammansoori/corpokart-site
   branch: main
   auth_scope: repo
-  base_url: https://netlify-cms-oauth.netlify.app  # Public proxy
+  base_url: https://netlify-cms-oauth.netlify.app  # GitHub OAuth proxy
+
+media_folder: "static/uploads"    # Jahaan images ya files upload hongi
+public_folder: "/uploads"          # URL path jo images ke liye use hoga
+
+media_library:
+  name: uploadcare                 # free media library (Uploadcare)
+  config:
+    publicKey: "demopublickey"     # Uploadcare ka demo key (free use kar sakte ho)
+
+collections:
+  - name: "products"               # Collection ka naam
+    label: "Products"              # CMS me dikhega
+    folder: "products"             # GitHub repo me folder jahan markdown files rakho
+    create: true                  # CMS se naya product create kar sakte ho
+    slug: "{{slug}}"              # URL slug ke liye
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
