@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: sammansoori/corpokart-site   # 👈 Replace with your GitHub username & repo name
+  repo: sammansoori/corpokart-site
   branch: main
 
 media_folder: "images/uploads"
@@ -9,7 +9,7 @@ public_folder: "/images/uploads"
 collections:
   - name: "products"
     label: "Products"
-    folder: "content/products"
+    folder: "products"
     create: true
     slug: "{{slug}}"
     fields:
