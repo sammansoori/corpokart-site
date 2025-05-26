@@ -1,15 +1,15 @@
 backend:
   name: github
-  repo: sammansoori/corpokart-site
+  repo: sammansoori/corpokart-site   # 👈 Replace with your GitHub username & repo name
   branch: main
 
-media_folder: "products"    # Tumhara wo folder jisme product files rakhe ho
-public_folder: "/products"  # URL me access ke liye
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
   - name: "products"
     label: "Products"
-    folder: "products"
+    folder: "content/products"
     create: true
     slug: "{{slug}}"
     fields:
