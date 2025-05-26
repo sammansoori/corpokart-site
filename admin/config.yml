@@ -3,18 +3,7 @@ backend:
   repo: sammansoori/corpokart-site
   branch: main
   auth_scope: repo
-  base_url: https://github.com/vencax/netlify-cms-github-oauth-provider
-
-media_folder: "static/uploads"    # Jahaan CMS images save karega
-public_folder: "/uploads"          # Browser mein ye folder se images serve hongi
-
-collections:
-  - name: "products"
-    label: "Products"
-    folder: "products"            # products folder mein content files hongi
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+  base_url: https://netlify-cms-oauth.netlify.app
+  # yahan client_id add karna hai (agar support kare)
+  client_id: Ov23li5XO37KKstYSdc1
+  # client_secret normally config.yml me nahi dalte (security reasons)
