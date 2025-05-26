@@ -4,6 +4,18 @@ backend:
   branch: main
   auth_scope: repo
   base_url: https://netlify-cms-oauth.netlify.app
-  # yahan client_id add karna hai (agar support kare)
-  client_id: Ov23li5XO37KKstYSdc1
-  # client_secret normally config.yml me nahi dalte (security reasons)
+  client_id: Ov23li5XO37KKstYSdc1   # Yahan apna GitHub OAuth Client ID daalein
+
+media_folder: "static/uploads"       # CMS me jo images upload karenge, woh yahan save honge
+public_folder: "/uploads"            # Ye path browser me image serve karne ke liye
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
