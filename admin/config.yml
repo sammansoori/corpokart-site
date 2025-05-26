@@ -2,6 +2,19 @@ backend:
   name: github
   repo: sammansoori/corpokart-site
   branch: main
-  auth_scope: repo           # Ye permissions specify karta hai
-  base_url: https://netlify-cms-oauth.netlify.app  # Public OAuth proxy (recommended for beginners)
-  app_id: Ov23li5XO37KKstYSdc1     # Yahan GitHub se mila Client ID daalo
+  auth_scope: repo
+  base_url: https://netlify-cms-oauth.netlify.app  # Public OAuth proxy for GitHub login
+
+media_folder: "static/uploads"   # CMS me jo images upload karoge woh yahan save hongi
+public_folder: "/uploads"        # Browser me images ke liye accessible path
+
+collections:
+  - name: "products"
+    label: "Products"
+    folder: "products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
