@@ -2,17 +2,5 @@ backend:
   name: github
   repo: sammansoori/corpokart-site
   branch: main
-
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
-
-collections:
-  - name: "products"
-    label: "Products"
-    folder: "products"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
+  auth_scope: repo
+  base_url: https://netlify-cms-oauth.netlify.app  # Public proxy
