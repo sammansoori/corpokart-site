@@ -1,15 +1,17 @@
 backend:
   name: github
-  repo: sammansoori/corpokart-site   # 👈 Replace with your GitHub username & repo name
+  repo: sammansoori/corpokart-site
   branch: main
+  auth_scope: repo
+  base_url: https://netlify-cms-oauth.netlify.app  # Public OAuth proxy
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/uploads"   # images jo CMS me upload honge yahan save honge
+public_folder: "/uploads"        # browser me ye folder se images serve hongi
 
 collections:
   - name: "products"
     label: "Products"
-    folder: "content/products"
+    folder: "products"
     create: true
     slug: "{{slug}}"
     fields:
