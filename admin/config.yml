@@ -3,7 +3,7 @@ backend:
   repo: sammansoori/corpokart-site
   branch: main
   auth_scope: repo
-  base_url: https://netlify-cms-oauth.netlify.app
+  base_url: https://github.com/vencax/netlify-cms-github-oauth-provider
 
 media_folder: "static/uploads"    # Jahaan CMS images save karega
 public_folder: "/uploads"          # Browser mein ye folder se images serve hongi
