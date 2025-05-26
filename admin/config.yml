@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_scope: repo
   base_url: https://netlify-cms-oauth.netlify.app
+
   client_id: Ov23li5XO37KKstYSdc1   # Yahan apna GitHub OAuth Client ID daalein
 
 media_folder: "static/uploads"       # CMS me jo images upload karenge, woh yahan save honge
